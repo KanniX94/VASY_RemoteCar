@@ -1,5 +1,4 @@
 from machine import Pin, PWM
-import time
 import xbee
 
 DUTY_CYCLE_MAX = 1023
@@ -119,29 +118,3 @@ while run:
         elif data[0] == "P" and data[1] == "1":
             print("Auto wurde geparkt!")
             run = False
-
-# while current_duty_cycle < DUTY_CYCLE_MAX:
-#     current_duty_cycle = current_duty_cycle + DUTY_CYCLE_STEP
-#     if current_duty_cycle > DUTY_CYCLE_MAX:
-#         current_duty_cycle = DUTY_CYCLE_MAX
-#     apwm.duty(current_duty_cycle)
-#     time.sleep(wait)
-#
-#     # Keep at maximum 2 seconds.
-# time.sleep(wait)
-#
-# # Decrease the duty cycle to the minimum value.
-# while current_duty_cycle > DUTY_CYCLE_MIN:
-#     current_duty_cycle = current_duty_cycle - DUTY_CYCLE_STEP
-#     if current_duty_cycle < DUTY_CYCLE_MIN:
-#         current_duty_cycle = DUTY_CYCLE_MIN
-#     apwm.duty(current_duty_cycle)
-#     time.sleep(wait)
-#
-#     # Keep at maximum 2 seconds.
-#     time.sleep(wait)
-#
-#
-#
-#     # Keep at maximum 2 seconds.
-# time.sleep(wait)
